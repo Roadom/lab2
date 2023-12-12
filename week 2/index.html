@@ -4,9 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 2</title>
+    <style>
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* Adjust the number as needed */
+            gap: 10px; /* Adjust the gap between buttons */
+            }
+
+        .button {
+            padding: 10px;
+            text-align: center;
+            background-color: #000000; /* Feel free to customize */
+            color: #fff;
+            font-weight: bolder;
+            border: none;
+            cursor: pointer;
+            }
+    </style>
 </head>
 <body>
     <h1>Olarte, Mon David R.</h1>
-    <img src="images/wish.jpg" width=20%>
+    <h2>Lab 2 Week 2 Activity</h2>
+    <div class="button-grid">
+        <button class="button" onclick="goToPage('lessons/intro.html')">Introductions and Basics</button>
+        <button class="button" onclick="goToPage('lessons/format.html')">Formatting and Style</button>
+        <button class="button" onclick="goToPage('lessons/colors.html')">Colors</button>
+        <button class="button" onclick="goToPage('lessons/links.html')">Links</button>
+        <button class="button" onclick="goToPage('lessons/images.html')">Images</button>
+        <button class="button" onclick="goToPage('lessons/tables.html')">Tables</button>
+        <button class="button" onclick="goToPage('lessons/lists.html')">Lists</button>
+        <button class="button" onclick="goToPage('lessons/more.html')">More HTML Elements</button>
+        <button class="button" onclick="goToPage('lessons/logic.html')">Logic</button>
+        <button class="button" onclick="goToPage('lessons/formshtml')">Forms</button>
+        <button class="button" onclick="goToPage('lessons/graphics.html')">Graphics</button>
+        <button class="button" onclick="goToPage('lessons/media.html')">Media</button>
+        <button class="button" onclick="goToPage('lessons/APIs.html')">APIs</button>
+        <!-- Add more buttons as needed -->
+      </div>
+      
+      <script>
+        function goToPage(page) {
+          window.location.href = page;
+        }
+      </script>
 </body>
 </html>
