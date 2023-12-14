@@ -11,7 +11,6 @@
           background-image: url('https://pbs.twimg.com/media/EWLYkneXQAAeAm8.jpg'); 
           background-repeat: no-repeat;
           background-size: cover;
-          margin: 0;
           padding: 20px;
         }
         h2 {
@@ -19,50 +18,74 @@
           color:white;
           text-align: center;
         }
-        .button-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px; 
-            }
-        .button {
-            padding: 10px;
-            text-align: center;
-            background-color: #000000; 
-            color: #fff;
-            font-weight: bolder;
-            border-radius: 10px;
-            cursor: pointer;
-            }
+        h3{
+          color:white;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+          color: white;
+        }
+        .Stuff-about-me{
+          margin: 20px;
+          background-color:#001f3f ;
+          border: 5px black;
+          padding: 10px;
+        }
         #name {
-            text-transform: uppercase;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            text-align: center;
-            color:white;
+          text-transform: uppercase;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          text-align: center;
+          color:white;
             }
+        #me {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 10%;
+          box-shadow: 0 0 10px 5px #48abe0,
+            0 0 20px 7px #ebecca;
+        }
+        #about-me{
+          text-align: left;
+         
+        } 
+
     </style>
 </head>
 <body>
     <h1 id="name">Olarte, Mon David R.</h1>
     <h2>Lab 2 Week 3 Activity (CSS EXERCISES)</h2>
-    <div class="button-grid">
-        <button class="button" onclick="goToPage('lessons/intro.html')">Introductions and Basics</button>
-        <button class="button" onclick="goToPage('lessons/format.html')">Formatting and Style</button>
-        <button class="button" onclick="goToPage('lessons/colors.html')">Colors</button>
-        <button class="button" onclick="goToPage('lessons/links.html')">Links</button>
-        <button class="button" onclick="goToPage('lessons/images.html')">Images</button>
-        <button class="button" onclick="goToPage('lessons/tables.html')">Tables</button>
-        <button class="button" onclick="goToPage('lessons/lists.html')">Lists</button>
-        <button class="button" onclick="goToPage('lessons/more.html')">More HTML Elements</button>
-        <button class="button" onclick="goToPage('lessons/logic.html')">Logic</button>
-        <button class="button" onclick="goToPage('lessons/forms.html')">Forms</button>
-        <button class="button" onclick="goToPage('lessons/graphics.html')">Graphics</button>
-        <button class="button" onclick="goToPage('lessons/media.html')">Media</button>
-        <button class="button" onclick="goToPage('lessons/APIs.html')">APIs</button>
-      </div>
-      <script>
-        function goToPage(page) {
-          window.location.href = page;
-        }
-      </script>
+    <img id="me" src = "https://preview.redd.it/ryan-gosling-v0-2qz0wb6wxs9b1.jpg?width=640&crop=smart&auto=webp&s=e56cdb689c268eeb7734a485bf3e609af5bec84f">
+    <div class="Stuff-about-me">
+    
+    <h2 id="about-me">About me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
+      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h3>Some video games I like</h3>
+    <ul style="color:white">
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+    </ul>
+    <h3>Some shows I like</h3>
+    <ul style="color:white">
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+      <li>Sample</li>
+    </ul>
+    
+  </div>
 </body>
 </html>
