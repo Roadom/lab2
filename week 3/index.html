@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
     <title>Lab 2</title>
     <style>
+        body {
+          background-image: url('https://images4.alphacoders.com/983/983535.jpg'); /* Artist is TunaMayo*/
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin: 0;
+          padding: 20px;
+        }
+        h2 {
+          font-family: Arial, Helvetica, sans-serif;
+          color:white;
+        }
         .button-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Adjust the number as needed */
-            gap: 10px; /* Adjust the gap between buttons */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px; 
             }
-
         .button {
             padding: 10px;
             text-align: center;
-            background-color: #000000; /* Feel free to customize */
+            background-color: #000000; 
             color: #fff;
             font-weight: bolder;
-            border: none;
+            border-radius: 10px;
             cursor: pointer;
+            }
+        #name {
+            text-transform: uppercase;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:white;
             }
     </style>
 </head>
 <body>
-    <h1>Olarte, Mon David R.</h1>
+    <h1 id="name">Olarte, Mon David R.</h1>
     <h2>Lab 2 Week 2 Activity</h2>
     <div class="button-grid">
         <button class="button" onclick="goToPage('lessons/intro.html')">Introductions and Basics</button>
@@ -39,9 +56,7 @@
         <button class="button" onclick="goToPage('lessons/graphics.html')">Graphics</button>
         <button class="button" onclick="goToPage('lessons/media.html')">Media</button>
         <button class="button" onclick="goToPage('lessons/APIs.html')">APIs</button>
-        <!-- Add more buttons as needed -->
       </div>
-      
       <script>
         function goToPage(page) {
           window.location.href = page;
