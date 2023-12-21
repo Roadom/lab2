@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Lab 2</title>
+    <title>Lab 2 Week 3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" type="image/png" href="images/bonfire.png">
     <style>
         body {
-          background-image: url('https://pbs.twimg.com/media/EWLYkneXQAAeAm8.jpg'); 
+          background-image: url('images/bgimg.jpg'); 
           background-repeat: no-repeat;
+          background-attachment: fixed;
           background-size: cover;
           padding: 20px;
+          font-family: Lora, serif;
         }
         h2 {
           font-family: Arial, Helvetica, sans-serif;
@@ -25,28 +30,43 @@
         p{
           color: white;
         }
+        .mySlides {
+          display:none;
+          border: solid 15px black;
+          margin: 10px;
+        }
         .Stuff-about-me{
           margin: 20px;
-          background-color:#001f3f ;
-          border: 5px black;
-          padding: 10px;
+          background-color:#764316 ;
+          border: 5px solid black;
+          border-radius: 20px;
+          padding: 20px;
         }
         #name {
           text-transform: uppercase;
+          font-size: 50px;
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           text-align: center;
+          font-weight: bolder;
           color:white;
-            }
+          border: black solid 5px;
+          background-color: #764316;
+        }
         #me {
           display: block;
           margin-left: auto;
           margin-right: auto;
-          width: 10%;
-          box-shadow: 0 0 10px 5px #48abe0,
+          width: 20%;
+          height: auto;
+          box-shadow: 0 0 10px 5px red,
             0 0 20px 7px #ebecca;
+          border-radius: 50px;
         }
-        #about-me{
+        #inside-header{
           text-align: left;
+          font-size: 30px;
+          font-weight: bolder;
+          font-family: Ubuntu, sans-serif;
          
         } 
 
@@ -55,37 +75,86 @@
 <body>
     <h1 id="name">Olarte, Mon David R.</h1>
     <h2>Lab 2 Week 3 Activity (CSS EXERCISES)</h2>
-    <img id="me" src = "https://preview.redd.it/ryan-gosling-v0-2qz0wb6wxs9b1.jpg?width=640&crop=smart&auto=webp&s=e56cdb689c268eeb7734a485bf3e609af5bec84f">
+    <img id="me" src = "https://preview.redd.it/5nwth8rhpoyb1.jpeg?width=1308&format=pjpg&auto=webp&s=221ea96c699bf95e27becf59fa516ae359af8877">
     <div class="Stuff-about-me">
-    
-    <h2 id="about-me">About me</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor
-      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <h3>Some video games I like</h3>
-    <ul style="color:white">
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-    </ul>
-    <h3>Some shows I like</h3>
-    <ul style="color:white">
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-      <li>Sample</li>
-    </ul>
-    
+      <h2 id="inside-header">About me</h2>
+      <p>Hello there! I'm <strong>Mon</strong> and I'm currently a 2nd year Computer Science student in <strong>Asia Pacific College</strong>. I don't really have anything else to say about myself so here are some of my interests: </p>
+      <h3 id="inside-header">Video Games</h3>
+      <p>If there is one thing that I grew up with other than playing outdoors with my friends, it was video games. We had a Playstation 1 but we were only allowed to set it up during summers
+      so my gametime was limited. I remember playing a couple games in that console such as a couple of Spyro games, Tekken 3, Crash Bandicoot, and Street Fighter (though I don't remember which one)
+      We also had a family computer that wasn't really for gaming but I had a lot of fun playing various games in it. Speaking of that, here are some of the games and genres that I had fun playing. 
+      </p>
+      <ul style="color:white; font-weight: bolder;", >
+        <li>Souls-like games </li>
+          <ul>
+          <li>Dark Souls Trilogy</li>
+          <li>Sekiro</li>
+          <li>Elden Ring</li>
+          </ul>
+        <li>Open World games</li>
+          <ul>
+          <li>Skyrim</li>
+          <li>Arkham Trilogy</li>
+          <li>Minecraft</li>
+          <li>Valheim</li>
+          </ul>
+        <li>Multiplayer Games</li>
+          <ul>
+          <li>League of Legends</li>
+          <li>Garry's Mod</li>
+          <li>Team Fortress 2</li>
+          <li>Lethal Company</li>
+          </ul>
+        <li>Rogue-like Games</li>
+          <ul>
+          <li>Slay the Spire</li>
+          <li>Risk of Rain 2</li>
+          <li>Inscryption</li>
+          <li>Dead Cells</li>
+          </ul>
+        <li>Other Games</li>
+          <ul>
+          <li>Tekken 7</li>
+          <li>Devil May Cry Series</li>
+          </ul>
+      </ul>
+      <h3 id="inside-header">Some shows I like</h3>
+      <p>When it comes to shows, I watch various genres from various media. From American TV shows to Anime, I have fun watching shows as long as they are entertaining enough.
+      Some shows don't even have to be good for me to enjoy them but I'll list down the shows that I am invested in the world building and story.
+      </p>
+      <ul style="color:white; font-weight: bold;">
+        <li>Hunter x Hunter </li>
+        <li>Fullmetal Alchemist Brotherhood</li>
+        <li>Breaking Bad</li>
+        <li>Better Call Saul</li>
+        <li>Jujutsu Kaisen</li>
+        <li>The Boys</li>
+        <li>Invincible</li>
+      </ul>
   </div>
+  <div class="w3-content w3-section" style="max-width:500px">
+    <img class="mySlides" src="https://preview.redd.it/0df6nt7xipzb1.jpg?width=640&crop=smart&auto=webp&s=078f74f18b1c8adc60d67861275ae809c2862ad1" style="width:100%">
+    <img class="mySlides" src="https://preview.redd.it/jbmxjltxipzb1.png?width=640&crop=smart&auto=webp&s=aa9aedb7424d8114c8915a2574cdc39a95da5c97" style="width:100%">
+    <img class="mySlides" src="https://preview.redd.it/2gk6lw77km4c1.jpg?width=960&crop=smart&auto=webp&s=9af86111503b5d8a29966d540ad2b3a2fdc0fb85" style="width:100%">
+    <img class="mySlides" src="https://preview.redd.it/nah-id-win-v0-ja5vwr7562zb1.jpg?width=640&crop=smart&auto=webp&s=29cb1a5006f9bf8bb22f281485ca3d04c9cee3d9" style="width:100%">
+    <img class="mySlides" src="https://preview.redd.it/nah-id-win-collections-v0-ncou6ygdmuyb1.jpg?width=640&crop=smart&auto=webp&s=e14aa01d380d26a4f44489240ef657511afc9a36" style="width:100%">
+  </div>
+  
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
 </body>
 </html>
