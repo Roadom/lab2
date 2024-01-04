@@ -42,6 +42,15 @@
           border-radius: 20px;
           padding: 20px;
         }
+        .mySlides {
+          height: 580px;
+        }
+        .reaction-btn {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            margin: auto;
+        }
         #name {
           text-transform: uppercase;
           font-size: 50px;
@@ -67,8 +76,12 @@
           font-size: 30px;
           font-weight: bolder;
           font-family: Ubuntu, sans-serif;
+          text-transform: uppercase;
          
-        } 
+        }
+        #soundBoard{
+          text-align: center;
+        }
 
     </style>
 </head>
@@ -139,7 +152,14 @@
     <img class="mySlides" src="https://preview.redd.it/nah-id-win-v0-ja5vwr7562zb1.jpg?width=640&crop=smart&auto=webp&s=29cb1a5006f9bf8bb22f281485ca3d04c9cee3d9" style="width:100%">
     <img class="mySlides" src="https://preview.redd.it/nah-id-win-collections-v0-ncou6ygdmuyb1.jpg?width=640&crop=smart&auto=webp&s=e14aa01d380d26a4f44489240ef657511afc9a36" style="width:100%">
   </div>
-  
+  <div id="soundBoard">
+    <h3>Some of the sounds inside my head (Spam to your heart's content)</h3>
+    <span class="reaction-btn" onclick="sound('cat')">🐱</span>
+    <span class="reaction-btn" onclick="sound('bruh')">😑</span>
+    <span class="reaction-btn" onclick="sound('yowai')">🤞</span>
+    <span class="reaction-btn" onclick="sound('boom')">💥</span>
+    <span class="reaction-btn" onclick="sound('huh')">🐢</span>
+  </div>
   <script>
     var myIndex = 0;
     carousel();
@@ -155,6 +175,18 @@
       x[myIndex-1].style.display = "block";  
       setTimeout(carousel, 2000); // Change image every 2 seconds
     }
+
+    function sound(soundName) {
+    const soundPaths = {
+        'cat': 'sounds/cat.mp3',
+        'bruh': 'sounds/bruh.mp3',
+        'yowai': 'sounds/yowai.mp3',
+        'boom': 'sounds/boom.mp3',
+        'huh': 'sounds/huh.mp3',
+    };
+    const audio = new Audio(soundPaths[soundName]);
+    audio.play();
+}
     </script>
 </body>
 </html>
