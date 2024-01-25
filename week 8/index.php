@@ -10,6 +10,31 @@
     <title>About me</title>
 </head>
 <body>
+<?php
+date_default_timezone_set('Asia/Kolkata'); //Default Timezone
+$Hour = date('G');
+// Greeting Arrays
+$morningGreetings = ['Good morning', 'Hello, had your coffee yet?', 'Top of the mornin\'!'];
+$afternoonGreetings = ['Good afternoon', 'Good afternoon to you!', 'Good afternoon, how was your day?'];
+$eveningGreetings = ['Good evening', 'zZzZZZZZ...', 'Good evening...'];
+//Picks a random greeting
+function getRandomGreeting($greetingArray) {
+    return $greetingArray[array_rand($greetingArray)];
+}
+
+if ($Hour >= 5 && $Hour <= 11) {
+    $greeting = getRandomGreeting($morningGreetings);
+} else if ($Hour >= 12 && $Hour <= 18) {
+    $greeting = getRandomGreeting($afternoonGreetings);
+} else {
+    $greeting = getRandomGreeting($eveningGreetings);
+}
+
+echo "<script>";
+echo "var greeting = '$greeting';";
+echo "alert(greeting);";
+echo "</script>";
+?>
   <!-- NAVIGATION BAR STUFF -->
   <div class="topnav">
     <h1>CONNECT WITH ME!</h1>
