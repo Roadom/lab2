@@ -103,7 +103,6 @@ echo $comment;
 echo "<br>";
 echo $gender;
 ?>
-
 <?php
 $servername = "localhost";
 $username = "webprogss221";
@@ -123,13 +122,8 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 $conn->close();
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Your existing form processing logic here
-  
-  // After processing, redirect to index.php
   header("Location: index.php");
   exit();
 }
