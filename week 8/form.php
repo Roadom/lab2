@@ -105,9 +105,9 @@ echo $gender;
 ?>
 <?php
 $servername = "localhost";
-$username = "webprogss221";
-$password = "=latHen97";
-$dbname = "webprogss221";
+$username = "root";
+$password = "Th1sismypassword42@";
+$dbname = "myDB";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -131,6 +131,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
+
+
+
+
 
 
 
