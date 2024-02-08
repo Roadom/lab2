@@ -105,9 +105,9 @@ echo $gender;
 ?>
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "Th1sismypassword42@";
-$dbname = "myDB";
+$username = "webprogss221";
+$password = "=latHen97";
+$dbname = "webprogss221";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
