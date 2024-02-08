@@ -1,13 +1,18 @@
+
 <!DOCTYPE HTML>  
 <html>
 <head>
 <style>
-.error {color: #FF0000;}
-
+  body {
+    background-color: #242222; /* Grey color */
+    color:white;
+  }
+.error {
+  color: #FF0000;
+  }
 </style>
 </head>
-<body>  
-
+<body>
 <?php
 // define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
@@ -55,14 +60,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $gender = test_input($_POST["gender"]);
   }
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Your existing form processing logic here
-    
-    // After processing, redirect to index.php
-    header("Location: index.php");
-    exit();
-  }
 }
 
 function test_input($data) {
@@ -72,7 +69,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-
 <h2>Kindly Answer This Before Visiting the Website</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
@@ -95,3 +91,51 @@ function test_input($data) {
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
+
+<?php
+$servername = "localhost";
+$username = "webprogss221";
+$password = "=latHen97";
+$dbname = "webprogss221";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO mrolarte_myguests (firstname, lastname, email)
+VALUES ('$name', '$website', '$email')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Your existing form processing logic here
+  
+  // After processing, redirect to index.php
+  header("Location: index.php");
+  exit();
+}
+?> 
+
+</body>
+</html>
